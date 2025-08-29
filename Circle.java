@@ -14,6 +14,7 @@ public class Circle
     private int xPosition;
     private int yPosition;
     private String color;
+    private String name;
     private boolean isVisible;
     
     /**
@@ -187,5 +188,14 @@ public class Circle
             Canvas canvas = Canvas.getCanvas();
             canvas.erase(this);
         }
+    }
+    
+    /**
+     * Rename the circle
+     */
+    public void rename(String newName)
+    {
+        name = newName;
+        draw();
     }
 }
